@@ -10,7 +10,7 @@ class App extends Component {
       <div className="main__wrap">
         <main className="container">
           <div>
-            <ShowQuestions /> 
+            <ShowQuestions />
           </div>
         </main>
       </div>
