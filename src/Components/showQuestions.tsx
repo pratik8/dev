@@ -3,7 +3,7 @@ import { QUESTIONS } from "../questions";
 import Button from "./button";
 
 const ShowQuestions = () => {
-  const [answer, setAnswer] = useState<Object>({ ['language_']: '' });
+  const [answer, setAnswer] = useState<Object>({});
 
   useEffect(() => {
     let answers = JSON.parse(localStorage.getItem("answers"))
