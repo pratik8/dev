@@ -20,7 +20,7 @@ export default function Button({ answer }) {
 
   return (<>
     {answer && Object.keys(answer).length === Object.keys(QUESTIONS).length ?
-      <div>
+      <div data-testid="scorebtn">
         <button className="button" onClick={calculateScore}>Calculate Score</button>
       </div> 
       : <></>}

@@ -33,6 +33,7 @@ const ShowQuestions = () => {
                 name={`language_${key}`}
                 checked={Object.keys(answer).length > 0 ? answer[`language_${key}`] === "yes" : false}
                 value="yes"
+                data-testid={`language_yes_${key}`}
               />
               <label>Yes</label>
               <input
@@ -42,6 +43,7 @@ const ShowQuestions = () => {
                 name={`language_${key}`}
                 checked={Object.keys(answer).length > 0 ? answer[`language_${key}`] === "no" : false}
                 value="no"
+                data-testid={`language_no_${key}`}
               />
               <label>No</label>
             </div>
