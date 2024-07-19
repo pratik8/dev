@@ -63,4 +63,21 @@ describe("Test to check if elements is visible", () => {
         fireEvent(button).click();
         expect(screen.getByText(/Your Score is : 0/i).toBeInTheDocument();
     });
+
+    it('Test to check if button is not visible', () => {
+        render(<App />);
+        let testid1 = screen.getByTestId("language_no_1");
+        let testid2 = screen.getByTestId("language_no_2");
+        let testid4 = screen.getByTestId("language_no_4");
+        let testid5 = screen.getByTestId("language_no_5");
+        let button = screen.getByTestId("scorebtn");
+        
+        
+        fireEvent(testid1).click();
+        fireEvent(testid2).click();
+        fireEvent(testid4).click();
+        fireEvent(testid5).click();
+        fireEvent(button).click();
+        expect(screen.getByText(/Your Score is : 0/i).not.toBeInTheDocument();
+    });
 });
