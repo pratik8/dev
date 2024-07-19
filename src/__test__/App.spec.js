@@ -78,6 +78,6 @@ describe("Test to check if elements is visible", () => {
         fireEvent(testid4).click();
         fireEvent(testid5).click();
         fireEvent(button).click();
-        expect(screen.getByText(/Your Score is : 0/i).not.toBeInTheDocument();
+        expect(button).not.toBeInTheDocument();
     });
 });
