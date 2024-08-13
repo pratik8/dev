@@ -1,16 +1,22 @@
-import React, { Component } from "react";
-import ShowQuestions from "./Components/showQuestions";
+import React, { Component } from 'react';
+import ShowQuestions from './Components/showQuestions';
+import ErrorBoundary from './Components/ErrorBoundary';
+
+import { ScoreContextWrapper } from './ContextApi/scoreContext';
 
 class App extends Component {
-  state = {
-  };
+  state = {};
 
- render() {
+  render() {
     return (
       <div className="main__wrap">
         <main className="container">
           <div>
-            <ShowQuestions />
+            <ErrorBoundary>
+              <ScoreContextWrapper>
+                <ShowQuestions />
+              </ScoreContextWrapper>
+            </ErrorBoundary>
           </div>
         </main>
       </div>
